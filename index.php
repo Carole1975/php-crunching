@@ -10,12 +10,18 @@
 
 	<h1>Dictionnaire</h1>
 
+
+	<?php   
+
+	    $string = file_get_contents("dictionnaire.txt", FILE_USE_INCLUDE_PATH);
+	    $dico = explode("\n", $string);
+
+	?>
+	  
 	  <p>Combien de mots contient ce dictionnaire?</p>
 
 	    <?php  
 
-	      $string = file_get_contents("dictionnaire.txt", FILE_USE_INCLUDE_PATH);
-	      $dico = explode("\n", $string);
 	       echo count($dico)." ". "mots.";
 	    ?>
 
